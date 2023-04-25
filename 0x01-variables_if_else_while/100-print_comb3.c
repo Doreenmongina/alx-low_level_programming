@@ -2,8 +2,8 @@
 /**
 * main - program compilation begins from main
 * Description: Program to print all possible combinations of numbers with no
-*  two numbers same in pairing
-*  Return: 0 (success)
+* two numbers same in pairing
+* Return: 0 (success)
 */
 int main(void)
 {
@@ -13,7 +13,7 @@ int main(void)
 	{
 		for (b = 49; b <= 57; b++)
 		{
-			if (a != b && b > a)
+			ifii (a != b && b > a)
 			{
 			putchar(a);
 			putchar(b);
