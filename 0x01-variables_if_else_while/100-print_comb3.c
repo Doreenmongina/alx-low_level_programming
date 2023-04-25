@@ -13,7 +13,7 @@ int main(void)
 	{
 		for (b = 49; b <= 57; b++)
 		{
-			ifii (a != b && b > a)
+			if (a != b || b > a)
 			{
 			putchar(a);
 			putchar(b);
