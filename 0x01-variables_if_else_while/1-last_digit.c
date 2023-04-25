@@ -1,33 +1,31 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * main - Entry point
- * Description: print the last digit of the number stored in the variable
+ * main - assign a random number to a variable
+ * and prints its last digit
+ *
  * Return: 0 (success)
  */
-
 int main(void)
 {
 	int n;
-	int x;
+	char num[32];
+	char dig;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	x = (n % 10);
+	sprintf(num, "%d", n);
+	dig = num[strlen(num) - 1];
 
-	if (x > 5)
-
-	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, x);
-	}
-	else if (x == 0)
-	{
-		 printf("last digit of %d is %d and is 0\n", n, x);
-	}
+	if (dig > '5' && n > 0)
+		printf("Last digit of %d is %c and is greater than 5\n", n, dig);
+	else if (dig == '0')
+		printf("Last digit of %d is %c and is 0\n", n, dig);
 	else
-	{
-		printf("last digit of %d is %d and is less than 6 and not 0\n", n, x);
-	}
+		printf("Last digit of %d is -%c and is less than 6 and not 0\n", n, dig);
 	return (0);
 }
+
