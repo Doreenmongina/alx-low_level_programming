@@ -1,15 +1,17 @@
-#include "stdio.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
-*main - Entry point
+* main - Entry point
 *
-*Return: nothing, return void
+* Return: Always 0 (success)
 */
 
 int main(void)
+
 {
 
 	printf("_putchar\n");
-	
+
 	return (0);
 }
