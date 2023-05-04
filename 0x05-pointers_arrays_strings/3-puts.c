@@ -1,19 +1,22 @@
 #include "main.h"
 #include <stdio.h>
-
+#include <string.h>
 /**
  * Main - entry point
- * _puts - print a string followed by a new line iin stdout
+ * _puts(string): print a string to the console
+ * string (str): the  string to print
  */
 
 void _puts(char *str)
 {
 
 	int i = 0;
-	while (str[i])
+
+	while (str[i] != '\0')
+
 	{
-		_putchar(str[i]);
+		putchar(str[i]);
 		i++;
 	}
-		_putchar('\n');
+		putchar('\n');
 }
