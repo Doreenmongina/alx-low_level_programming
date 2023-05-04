@@ -9,18 +9,26 @@
 
 int main(void)
 {
+	/**
+	 *  Seed the random number generator with the current time
+	 *  srand(time(NULL));
+	 *  Define the valid characters for the password
+	 */
+	const char* valid_chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_=+[{]}\\|;:'\",<.>/?";
 
-	char password[7];
-	int i,
+	/* define the length of the password */
+	const int password_length = 10;
 
-	sum = 0;
+	/* Generate the password */
+	char password[password_length + 1];
+	for (int i = 0; i < password_length; i++) 
+	{
+		password[i] = valid_chars[rand() % strlen(valid_chars)];
+	}
+	password[password_length] = '\0';
 
-	srand (time (NULL));
-	for (i = 0; i < 7; i++);
+	/* Print the password */
+	printf("Password: %s\n", password);
 
-		password[i] = rand() % 94 + 33;
-
-	print("%s\n", password);
-
-	return (0);
+	return 0;
 }
